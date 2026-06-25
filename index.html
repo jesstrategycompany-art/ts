@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JessyDeMLima - Página Oficial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 2.8em;
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    .hero {
+      background: url('sua-imagem.jpeg') no-repeat center center;
+      background-size: cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      padding: 20px;
+    }
+    .hero-content h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    .cta-button {
+      background: #ff4500;
+      color: #fff;
+      padding: 15px 40px;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .cta-button:hover {
+      background: #e63900;
+    }
+    footer {
+      background: #111;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>✨ JessyDeMLima ✨</h1>
+    <p>Arte, magia e inspiração no Kwai</p>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Descubra um mundo encantado...</h2>
+      <p>🌌 Conteúdos únicos e envolventes esperam por você.</p>
+      <a class="cta-button" href="https://www.kwai.com/@jessydemlima" target="_blank">
+        ➡️ Seguir no Kwai
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 JessyDeMLima | Todos os direitos reservados
+  </footer>
+</body>
+</html>
