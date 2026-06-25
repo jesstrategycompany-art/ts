@@ -25,7 +25,7 @@
       color: #ccc;
     }
     .hero {
-      background: url('sua-imagem.jpeg') no-repeat center center;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><radialGradient id="glow1" cx="30%" cy="40%"><stop offset="0%" style="stop-color:%23ffffff;stop-opacity:0.8"/><stop offset="100%" style="stop-color:%2300ffff;stop-opacity:0.2"/></radialGradient></defs><rect fill="%23001a33" width="1200" height="800"/></svg>') no-repeat center center;
       background-size: cover;
       height: 70vh;
       display: flex;
@@ -37,17 +37,34 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.3);
     }
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 600px;
       padding: 20px;
+      animation: fadeInUp 1s ease-out;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .hero-content h2 {
       font-size: 2em;
       margin-bottom: 15px;
+      text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+    .hero-content p {
+      font-size: 1.1em;
+      color: #ccc;
+      margin-bottom: 20px;
     }
     .cta-button {
       background: #ff4500;
@@ -58,12 +75,15 @@
       border-radius: 8px;
       cursor: pointer;
       text-decoration: none;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
       display: inline-block;
       margin-top: 20px;
+      box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
     }
     .cta-button:hover {
       background: #e63900;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 69, 0, 0.8);
     }
     footer {
       background: #111;
@@ -71,17 +91,25 @@
       font-size: 0.9em;
       color: #aaa;
     }
+    .sparkle {
+      display: inline-block;
+      animation: twinkle 2s infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>✨ JessyDeMLima ✨</h1>
+    <h1><span class="sparkle">✨</span> JessyDeMLima <span class="sparkle">✨</span></h1>
     <p>Arte, magia e inspiração no Kwai</p>
   </header>
 
   <section class="hero">
     <div class="hero-content">
-      <h2>Descubra um mundo encantado...</h2>
+      <h2>✨ Descubra um mundo encantado... ✨</h2>
       <p>🌌 Conteúdos únicos e envolventes esperam por você.</p>
       <a class="cta-button" href="https://www.kwai.com/@jessydemlima" target="_blank">
         ➡️ Seguir no Kwai
